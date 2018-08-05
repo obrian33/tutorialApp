@@ -6,10 +6,11 @@ import { ListComponent } from './Components/list/list.component';
 import { CreateComponent } from './Components/create/create.component';
 import { EditComponent } from './Components/edit/edit.component';
 
+import { IssueService } from './Service/issue.service';
+
 import { MatToolbarModule } from '@angular/material';
 
 import { Routes, RouterModule } from '@angular/router';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   {
@@ -40,10 +41,9 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    MatToolbarModule,
-    BrowserAnimationsModule
+    MatToolbarModule
   ],
-  providers: [],
+  providers: [IssueService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
